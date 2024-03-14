@@ -8,6 +8,7 @@ createApp({
       contacts,
       counter: 0,
       newText: '',
+      searchUser: '',
       
     }
   },
@@ -27,11 +28,21 @@ createApp({
           status: 'received'
         });
       }, 1000);
-  },
+    },
     
   },
 
   computed: {
+    myFilter(){
+      this.contacts.forEach(contact => {
+        if(contact.name.toLowerCase().includes(this.searchUser.toLowerCase())){
+          contact.visible = true;
+        }else{
+          contact.visible = false;
+        }
+      });
+      return this.contacts;
+    }
 
   },
 

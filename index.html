@@ -58,7 +58,11 @@
           <div class="search-bar">
             <div class="inner">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Cerca o inizia una nuova chat">
+              <input 
+                v-model="searchUser"
+                type="text" 
+                placeholder="Cerca o inizia una nuova chat"
+              >
             </div>
           </div>
           <!-- /search-bar -->
@@ -66,7 +70,8 @@
           <!-- users bar -->
           <div class="users-bar">
             <div 
-              v-for="(contact, index) in contacts"
+              v-for="(contact, index) in myFilter"
+              v-show="contact.visible"
               @click="counter = index; console.log(`counter:${counter}`); console.log(`index:${index}`);"
               class="user"
             >
@@ -247,7 +252,7 @@
         <!-- chat -->
         <section 
           v-for="(contact, index) in contacts"
-          v-show="counter == index"
+          v-show="counter === index"
           class="chat"
         >
           <div class="top-bar">
