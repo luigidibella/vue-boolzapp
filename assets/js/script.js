@@ -6,6 +6,7 @@ createApp({
   data() {
     return {
       contacts,
+      counter: 0
       
     }
   },
@@ -19,6 +20,6 @@ createApp({
   },
 
   mounted() {
-    console.log(contacts);
+    console.log();
   },
 }).mount('#app')

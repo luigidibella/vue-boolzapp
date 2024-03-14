@@ -66,7 +66,8 @@
           <!-- users bar -->
           <div class="users-bar">
             <div 
-              v-for="contact in contacts"
+              v-for="(contact, index) in contacts"
+              @click="counter = index; console.log(`counter:${counter}`); console.log(`index:${index}`);"
               class="user"
             >
               <div class="pic">
@@ -244,19 +245,23 @@
         <!-- /profile -->
         
         <!-- chat -->
-        <section class="chat">
+        <section 
+          v-for="(contact, index) in contacts"
+          v-show="counter == index"
+          class="chat"
+        >
           <div class="top-bar">
             <div class="user">
               <div class="pic">
-                <img src="assets/img/avatar_1.jpg" alt="">
+                <img :src="contact.avatar" alt="">
               </div>
 
               <div class="info">
                 <div class="name">
-                  <h4>Michele</h4>
+                  <h4>{{contact.name}}</h4>
                 </div>
                 <div class="last-seen">
-                  <span>Ultimo accesso oggi alle 16:26</span>
+                  <span>Ultimo accesso oggi alle {{contact.messages[contact.messages.length - 1].date.split(" ")[1].slice(0, 5)}}</span>
                 </div>
               </div>
             </div>
@@ -269,39 +274,52 @@
           </div>
           <!-- chat-box -->
           <div class="chat-box">
-            <div class="column">
+            <div
+              class="column"
+            >
 
-              <div class="row sent">
-                <div class="message sent">
+              <div 
+                v-for="(text, index) in contacts[counter].messages"
+                class="row"
+                :class="text.status === 'sent'
+                ? 'sent' 
+                : ''"
+              >
+                <div 
+                  class="message"
+                  :class="text.status === 'sent'
+                  ? 'sent' 
+                  : ''"
+                >
                   <div class="top-inner">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, facere fugit. Dignissimos totam, et nostrum sint fuga placeat? Nostrum at voluptates, possimus dicta quae eligendi. Sint sequi quasi atque iste deleniti excepturi!</p>
+                    <p>{{text.message}}</p>
                     <div class="tick">
                       <i class="fa-solid fa-chevron-down"></i>
                     </div>
                   </div>
                   <div class="bottom-inner">
                     <div class="time">
-                      <span>16:13</span>
+                      <span>{{text.date.split(" ")[1].slice(0, 5)}}</span>
                     </div>
                   </div>
                 </div>
               </div>
   
-              <div class="row">
+              <!-- <div class="row">
                 <div class="message">
                   <div class="top-inner">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, facere fugit. Dignissimos totam, et nostrum sint fuga placeat? Nostrum at voluptates, possimus dicta quae eligendi. Sint sequi quasi atque iste deleniti excepturi!</p>
+                    <p>{{text.message}}</p>
                     <div class="tick">
                       <i class="fa-solid fa-chevron-down"></i>
                     </div>
                   </div>
                   <div class="bottom-inner">
                     <div class="time">
-                      <span>16:15</span>
+                      <span>{{text.date.split(" ")[1].slice(0, 5)}}</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>

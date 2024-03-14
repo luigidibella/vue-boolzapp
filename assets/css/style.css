@@ -245,11 +245,13 @@ i {
 
 .top-inner {
   display: flex;
+  justify-content: space-between;
   padding: 15px;
 }
 
 .top-inner p{
   font-weight: 500;
+  margin-right: 10px;
 }
 
 .top-inner .tick i{
