@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boolzapp UI</title>
+  <!-- Vue -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.js' integrity='sha512-HcrASPdMSe1yYbktoxd11Usijn0iUKvwINCiWyKDc8gZBG2zEI1K4No/s4skLpCwFQG38yxVuENURMeDUsoq9Q==' crossorigin='anonymous'></script>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- main -->
+  <main>
+
+    <div id="app" class="interface">
+      <div class="container">
+        
+        <!-- profile -->
+        <section class="profile">
+          <div class="top-bar">
+            <div class="pic">
+              <img src="assets/img/avatar_io.jpg" alt="">
+            </div>
+
+            <div class="options">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+
+          <!-- notifications -->
+          <div class="notifications">
+            <div class="pic">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            
+            <div class="button">
+              <div class="name">
+                <strong>Ricevi notifiche di nuovi messaggi</strong>
+              </div>
+              <div class="link">
+                <ul>
+                  <li><a href="https://c.tenor.com/4gPD1ccxrVgAAAAC/tenor.gif">Attiva notifiche desktop</a></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+          <!-- /notifications -->
+
+          <!-- search-bar -->
+          <div class="search-bar">
+            <div class="inner">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+          </div>
+          <!-- /search-bar -->
+          
+          <!-- users bar -->
+          <div class="users-bar">
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_1.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Michele</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>16:15</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_2.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Fabio</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>16:05</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_3.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Samuele</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>16:03</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_4.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Alessandro B.</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>15:50</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_5.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Alessandro L.</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>15:45</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_6.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Claudia</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>15:40</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_7.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Federico</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>15:22</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_8.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Davide</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>15:15</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_1.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Michele</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>16:15</span>
+              </div>
+            </div>
+            
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_2.jpg" alt="">
+              </div>
+              <div class="info">
+                <div class="name">
+                  <h4>Fabio</h4>
+                </div>
+                <div class="last-message">
+                  <span>Lorem ipsum dolor sit amet</span>
+                </div>
+              </div>
+              <div class="time">
+                <span>16:05</span>
+              </div>
+            </div>
+            
+          </div>
+          <!-- /users bar -->
+        </section>
+        <!-- /profile -->
+        
+        <!-- chat -->
+        <section class="chat">
+          <div class="top-bar">
+            <div class="user">
+              <div class="pic">
+                <img src="assets/img/avatar_1.jpg" alt="">
+              </div>
+
+              <div class="info">
+                <div class="name">
+                  <h4>Michele</h4>
+                </div>
+                <div class="last-seen">
+                  <span>Ultimo accesso oggi alle 16:26</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="options">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <!-- chat-box -->
+          <div class="chat-box">
+            <div class="column">
+
+              <div class="row sent">
+                <div class="message sent">
+                  <div class="top-inner">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, facere fugit. Dignissimos totam, et nostrum sint fuga placeat? Nostrum at voluptates, possimus dicta quae eligendi. Sint sequi quasi atque iste deleniti excepturi!</p>
+                    <div class="tick">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                  </div>
+                  <div class="bottom-inner">
+                    <div class="time">
+                      <span>16:13</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="message">
+                  <div class="top-inner">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, facere fugit. Dignissimos totam, et nostrum sint fuga placeat? Nostrum at voluptates, possimus dicta quae eligendi. Sint sequi quasi atque iste deleniti excepturi!</p>
+                    <div class="tick">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                  </div>
+                  <div class="bottom-inner">
+                    <div class="time">
+                      <span>16:15</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- /chat-box -->
+
+          <!-- typing-box -->
+          <div class="typing-box">
+            <i class="fa-regular fa-face-smile"></i>
+            <div class="input-text">
+              <input type="text" placeholder="Scrivi un messaggio">
+            </div>
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+          <!-- /typing-box -->
+        </section>
+        <!-- /chat -->
+        
+      </div>
+    </div>
+
+  </main>
+  <!-- /main -->
+
+  <!-- JavaScript -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
