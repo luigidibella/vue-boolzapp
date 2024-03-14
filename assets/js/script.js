@@ -61,6 +61,11 @@ createApp({
 
   mounted() {
     this.updateFormattedDateTime();
+
+    setInterval(() => {
+      this.updateFormattedDateTime();
+    }, 1000);
+
     console.log();
   },
 }).mount('#app')
