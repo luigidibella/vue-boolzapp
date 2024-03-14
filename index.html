@@ -72,7 +72,7 @@
             <div 
               v-for="(contact, index) in myFilter"
               v-show="contact.visible"
-              @click="counter = index; console.log(`counter:${counter}`); console.log(`index:${index}`);"
+              @click="counter = index; console.log(`counter:${counter} / index:${index}`);"
               class="user"
             >
               <div class="pic">

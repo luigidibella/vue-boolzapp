@@ -21,17 +21,17 @@ body {
   border: 1px solid black;
 }
 
-main {
+/* main {
 
-}
+} */
 
 img {
   width: 100%;
 }
 
-ul {
+/* ul {
 
-}
+} */
 
 li {
   list-style: none;
@@ -86,8 +86,9 @@ i {
   background-color: #8edafc;
 }
 
-.notifications .pic {
-}
+/* .notifications .pic {
+
+} */
 
 .notifications .pic i {                /* DEBUG */
   color: #8edafc;
@@ -258,9 +259,9 @@ i {
   font-size: 15px;
 }
 
-.bottom-inner {
+/* .bottom-inner {
   
-}
+} */
 
 .bottom-inner .time {
   display: flex;
