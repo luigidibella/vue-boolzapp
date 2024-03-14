@@ -212,7 +212,7 @@ i {
   justify-content: center;
   height: calc(100% - 140px);
   overflow-y: scroll;
-  background-image: url(/assets/img/mine.jpg);
+  background-image: url(/img/mine.jpg);
 }
 
 .column {

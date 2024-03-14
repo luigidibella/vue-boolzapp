@@ -1,8 +1,11 @@
+import { contacts } from './contacts.js'
+
 const { createApp } = Vue;
 
 createApp({
   data() {
     return {
+      contacts,
       
     }
   },
@@ -11,7 +14,11 @@ createApp({
     
   },
 
+  computed: {
+
+  },
+
   mounted() {
-    console.log('Hello Vue');
+    console.log(contacts);
   },
 }).mount('#app')

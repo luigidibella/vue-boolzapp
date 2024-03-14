@@ -24,7 +24,7 @@
         <section class="profile">
           <div class="top-bar">
             <div class="pic">
-              <img src="assets/img/avatar_io.jpg" alt="">
+              <img src="./img/avatar_io.jpg" alt="">
             </div>
 
             <div class="options">
@@ -65,24 +65,27 @@
           
           <!-- users bar -->
           <div class="users-bar">
-            <div class="user">
+            <div 
+              v-for="contact in contacts"
+              class="user"
+            >
               <div class="pic">
-                <img src="assets/img/avatar_1.jpg" alt="">
+                <img :src="contact.avatar" alt="">
               </div>
               <div class="info">
                 <div class="name">
-                  <h4>Michele</h4>
+                  <h4>{{contact.name}}</h4>
                 </div>
                 <div class="last-message">
-                  <span>Lorem ipsum dolor sit amet</span>
+                  <span>{{contact.messages[contact.messages.length - 1].message}}</span>
                 </div>
               </div>
               <div class="time">
-                <span>16:15</span>
+                <span>{{contact.messages[contact.messages.length - 1].date.split(" ")[1].slice(0, 5)}}</span>
               </div>
             </div>
             
-            <div class="user">
+            <!-- <div class="user">
               <div class="pic">
                 <img src="assets/img/avatar_2.jpg" alt="">
               </div>
@@ -233,7 +236,7 @@
               <div class="time">
                 <span>16:05</span>
               </div>
-            </div>
+            </div> -->
             
           </div>
           <!-- /users bar -->
@@ -323,6 +326,6 @@
   <!-- /main -->
 
   <!-- JavaScript -->
-  <script src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>
