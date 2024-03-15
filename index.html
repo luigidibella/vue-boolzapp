@@ -87,7 +87,7 @@
                 </div>
               </div>
               <div class="time">
-                <span>{{contact.messages[contact.messages.length - 1].date.split(" ")[1].slice(0, 5)}}</span>
+                <span>{{onlyTime(contact.messages[contact.messages.length - 1].date)}}</span>
               </div>
             </div>
             
@@ -266,7 +266,7 @@
                   <h4>{{contact.name}}</h4>
                 </div>
                 <div class="last-seen">
-                  <span>Ultimo accesso oggi alle {{contact.messages[contact.messages.length - 1].date.split(" ")[1].slice(0, 5)}}</span>
+                  <span>Ultimo accesso oggi alle {{onlyTime(contact.messages[contact.messages.length - 1].date)}}</span>
                 </div>
               </div>
             </div>
@@ -304,7 +304,7 @@
                   </div>
                   <div class="bottom-inner">
                     <div class="time">
-                      <span>{{text.date.split(" ")[1].slice(0, 5)}}</span>
+                      <span>{{onlyTime(text.date)}}</span>
                     </div>
                   </div>
                 </div>

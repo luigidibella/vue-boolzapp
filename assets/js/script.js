@@ -42,6 +42,10 @@ createApp({
 
       this.formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
     },
+
+    onlyTime(date) {
+      return date.split(" ")[1].slice(0, 5);
+    },
     
   },
 
